@@ -9,24 +9,34 @@ var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 });
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin'); 
+
 module.exports = {
   resolve: {
     extensions: [".js", ".json", ".css"]
   },
   devtool: "eval-source-map",
   entry: [
-    './app/index.js'
+    './app/js/index.js'
   ],
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-0'],
           plugins: ['react-html-attrs', 'transform-decorators-legacy', 'transform-class-properties'],
         }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      { 
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+        loader: 'url-loader?limit=100000'
       }
     ]
   },
