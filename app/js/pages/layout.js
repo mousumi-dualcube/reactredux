@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router'
-import '../css/style.css'
+import '../../css/style.css'
 
 
 class Layout extends React.Component {
@@ -90,14 +90,14 @@ class Layout extends React.Component {
 									<div class="col-md-4 col-sm-12 col-xs-12">
 										<div class="flicker_image" ><label>Flicker widget</label></div>
 										<div class="flicker_image" >
-											<span><img class="img-responsive" src={ require("../images/flicker.png")} alt="Chania"  /></span>
-											<span><img class="img-responsive" src={ require("../images/flicker.png")} alt="Chania"  /></span>        
-											<span><img class="img-responsive" src={ require("../images/flicker.png")} alt="Chania"  /></span>
+											<span><img class="img-responsive" src={ require("../../images/flicker.png")} alt="Chania"  /></span>
+											<span><img class="img-responsive" src={ require("../../images/flicker.png")} alt="Chania"  /></span>        
+											<span><img class="img-responsive" src={ require("../../images/flicker.png")} alt="Chania"  /></span>
 										</div>
 										<div class="flicker_image">
-											<span><img class="img-responsive" src={ require("../images/flicker.png")} alt="Chania"  /></span>
-											<span><img class="img-responsive" src={ require("../images/flicker.png")} alt="Chania"  /></span>        
-											<span><img class="img-responsive" src={ require("../images/flicker.png")} alt="Chania"  /></span>
+											<span><img class="img-responsive" src={ require("../../images/flicker.png")} alt="Chania"  /></span>
+											<span><img class="img-responsive" src={ require("../../images/flicker.png")} alt="Chania"  /></span>        
+											<span><img class="img-responsive" src={ require("../../images/flicker.png")} alt="Chania"  /></span>
 										</div>
 									</div>
 								</div>

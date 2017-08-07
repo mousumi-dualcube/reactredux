@@ -1,7 +1,27 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { getAllProducts } from '../actions'
 
-const Home = () => {
-	return (<div>Home</div>);
+class Home extends React.Component{
+	constructor(props){
+		super(props);		
+	}
+
+	render() {
+		console.log(this.props.products);
+		return (
+			<div>
+				Home
+			</div>
+		);
+	}
 }
+const mapStateToProps = (state, ownProps) => {
+  return {
+    products: state.products
+  }
+};
 
-export default Home;
+export default connect(
+  mapStateToProps
+)(Home);
