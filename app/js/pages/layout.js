@@ -61,11 +61,59 @@ class Layout extends React.Component {
 	        		</header>        					
 				</div>
 				<div className="body_div">
-	    			<div className="container">
-	        			<div className="row">
-	        				{this.props.children}
-	        			</div>
-	        		</div>
+	    			<div className="container">	        			
+        				<div class="col-md-9 main_content">
+	        				{this.props.children}	        		
+			        		<div class="row body_addon">
+								<div class="col-md-3 col-sm-12 col-xs-12">
+									<div class="free_shipping">
+										<label>Free Shipping</label>
+										<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Vivamus metus   turpis turpis turpist urpi stu, </p>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-12 col-xs-12">
+									<div class="testimonial">
+										<label>Testimonials</label>
+										<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Vivamus metus   turpis turpis turpist urpi stu, </p>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12 col-xs-12">
+									<div class="blog_news">
+										<div class="media">
+											<label class=" media-left blog_dt">APR 01</label>
+											<div class="media-body">
+												<h4 class="media-heading">Media heading</h4>
+												Cras sit amet nibh libero, in gravida nulla. Nulla vel metus.
+											</div>
+										</div>
+										<div class="media">
+											<label class=" media-left blog_dt">APR 01</label>
+											<div class="media-body">
+												<h4 class="media-heading">Media heading</h4>
+												Cras sit amet nibh libero, in gravida nulla. Nulla vel metus.
+											</div>
+										</div>
+									</div>
+								</div>
+						    </div>
+						</div>
+						<div class="col-md-3">
+							<div class="sidebar_block">
+								<div><h4>Coupons available : </h4></div>
+								<div class="coupon_design">
+									<p><label><span class="coupon_value">20</span><span class="percentage_sign">%</span></label>
+									<label class="off_patern">OFF</label></p>
+									<p><span class="use_intraction">Use Coupon code <span>UPTO20</span></span></p>
+								</div>
+								<div class="or_text"><h4 class=" text-center">OR</h4></div>
+								<div class="coupon_design">
+									<p><label><span class="coupon_value">50</span><span class="percentage_sign">%</span></label>
+									<label class="off_patern">OFF</label></p>
+									<p><span class="use_intraction">Use Coupon code <span>FLAT50</span></span></p>
+								</div>
+							</div>
+						</div>
+					</div>					
 	        	</div>	
 				<div class="footer_div">
 					<footer>
