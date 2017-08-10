@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getAllProducts } from '../actions'
+import {addToCart} from '../actions'
 import Product from './product'
 
 class Home extends React.Component{
@@ -25,7 +25,7 @@ class Home extends React.Component{
 	                        	(this.props.products.length > 0) ?
 	                        		this.props.products.map((element, index) => {
 	                        			if(element.createdAt > (d/1000|0)) {
-	                        				return <Product key={index} data={element}/>
+	                        				return <Product key={index} data={element} onAddToCartClicked={() => this.props.addToCart(element.id)}/>
 	                        			}
 	                        		})
 	                        	: ''
@@ -37,12 +37,14 @@ class Home extends React.Component{
 		);
 	}
 }
+
 const mapStateToProps = (state, ownProps) => {
   return {
     products: state.products
   }
-};
+}
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  { addToCart }
 )(Home);

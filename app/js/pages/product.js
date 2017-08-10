@@ -13,9 +13,9 @@ class Product extends React.Component{
 					<h4>{this.props.data.title}</h4>
 					<span className="shop_price">
 						<span className="amount">{this.props.data.price}</span>
-						<input type="number" className="text-center shop_quantity_change" value="1" />
+						<input type="number" className="text-center shop_quantity_change" />
 					</span>
-					<a rel="nofollow" href="#" data-quantity="1" data-product_id={this.props.data.id} className="btn btn-primary add_to_cart">Add to cart</a>
+					<button data-quantity="1" onClick={this.props.onAddToCartClicked} className="btn btn-primary">Add to cart</button>
 				</section>
 			</div>
 		);
